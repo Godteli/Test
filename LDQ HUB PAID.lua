@@ -2082,13 +2082,13 @@ if game.PlaceId == 2753915549 then
     function TP1(Pos)
     Distance = (Pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
     if Distance < 1200 then
-        Speed = 1200
+        Speed = 300
     elseif Distance < 1000 then
-        Speed = 1200
+        Speed = 300
     elseif Distance < 2600 then
-        Speed = 1200
+        Speed = 300
     elseif Distance >= 1000 then
-        Speed = 1200
+        Speed = 300
     end
     game:GetService("TweenService"):Create(
         game.Players.LocalPlayer.Character.HumanoidRootPart,
@@ -2100,9 +2100,9 @@ end
     function TP(Pos)
         Distance = (Pos.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
         if Distance < 1000 then
-            Speed = 1200
+            Speed = 300
         elseif Distance >= 1000 then
-            Speed = 1200
+            Speed = 300
         end
         game:GetService("TweenService"):Create(
             game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
