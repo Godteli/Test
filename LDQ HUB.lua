@@ -2136,14 +2136,11 @@ local DevilFruit = RenUi:AddTab("Devil Fruit","7044233235")
 local Shop = RenUi:AddTab("Shop","6031265976")
 local Misc = RenUi:AddTab("Misc","6034509993")
 --------------------------------------------------------------------
-Main:AddSeperator("LDQ HUB-Blox Fruit by BinxGodteli")
-Main:AddSeperator("Welcome To LDQ Hub Community")
+Main:Seperator("Welcome To LDQ Hub Community")
 
 Main:Button("Copy Link Discord",function()
     setclipboard("https://discord.gg/ppDqYsPUSm")
 end)
-
-Main:AddSeperator("Settings Farm")
 
 Time = Main:AddLabel("Server Time")
 
