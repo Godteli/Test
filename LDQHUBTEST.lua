@@ -2157,7 +2157,7 @@ end)
 end
 end)
 
-Main:AddButton("Copy Link Discord", function()
+Main:AddButton("Copy Link Discord",function()
     setclipboard("https://discord.gg/ppDqYsPUSm")
 end)
 
