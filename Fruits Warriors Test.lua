@@ -22,46 +22,8 @@ local function is_running()
     return library.open
 end
 
-local main = window:AddFolder('Main') do 
-    local quest_table = {}
-    do 
-        for i, v in pairs(getgc(true)) do 
-            if (type(v) == 'table' and rawget(v, 'Quest') and rawget(v, 'Text')) then 
-                table.insert(quest_table, v.Quest)
-            end
-            
-            if (#quest_table == 16) then break end
-        end
-        
-        for i = 1, math.floor(#quest_table/2) do -- stole this from dev forum
-            local j = #quest_table - i + 1
-            quest_table[i], quest_table[j] = quest_table[j], quest_table[i]
-        end
-    end
-    
-    local function get_mob(overwrite)
-        local dist = math.huge 
-        local mob = nil 
-        
-        for i,v in pairs(workspace.Mobs:GetChildren()) do
-            local m_root = v:FindFirstChild('HumanoidRootPart')
-            local m_head = v:FindFirstChild('Head')
-            local char = client.Character 
-            local root = char and char:FindFirstChild('HumanoidRootPart')
-            
-            if (not overwrite or v.Name == overwrite and m_root and char and root and m_head and m_head.Transparency == 0) then 
-                local mag = (m_root.Position - root.Position).magnitude 
-                
-                if (mag < dist) then 
-                    dist = mag 
-                    mob = v 
-                end
-            end
-        end
-        
-        return mob
-    end
-    
+local main = library:CreateWindow('Main')
+
     local function attack()
         if (client.Backpack:FindFirstChild(flags.chosen_weapon)) then 
             client.Character.Humanoid:EquipTool(client.Backpack:FindFirstChild(flags.chosen_weapon))
@@ -152,7 +114,7 @@ local main = window:AddFolder('Main') do
     end)
 end
 
-local settings = window:AddFolder('Settings') do 
+local settings = library:CreateWindow('Settings')
     settings:AddButton({text = 'Unload', callback = function() library:Close() end}) 
 end
 
