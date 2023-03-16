@@ -6,7 +6,21 @@ local workspace = game:GetService('Workspace')
 local replicatedstorage = game:GetService('ReplicatedStorage')
 local http_service = game:GetService('HttpService')
 
+local flags = library.flags
+local client = players.LocalPlayer
+local mobs = workspace.Mobs
+local quests = client.Data.Quests
+local req = (syn and syn.request) or (http and http.request) or (KRNL_LOADED and http_request) or (fluxus and fluxus.request) or request -- infinite yiel
 
+for i,v in pairs(getconnections(client.Idled)) do 
+    v:Disable()
+end
+
+getgenv().isnetworkowner = isnetworkowner or function(part) return part.ReceiveAge == 0 end -- found on githb
+
+local function is_running()
+    return library.open
+end
 
 local main = window:AddFolder('Main') do 
     local quest_table = {}
@@ -142,7 +156,22 @@ local settings = window:AddFolder('Settings') do
     settings:AddButton({text = 'Unload', callback = function() library:Close() end}) 
 end
 
-
+window:AddButton({text = 'Join Discord', callback = function()
+    setclipboard('discord.gg/ppDqYsPUSm')
+    req({
+        Url = 'http://127.0.0.1:6463/rpc?v=1',
+        Method = 'POST',
+        Headers = {
+            ['Content-Type'] = 'application/json',
+            Origin = 'https://discord.com'
+        },
+        Body = http_service:JSONEncode({
+            cmd = 'INVITE_BROWSER',
+            nonce = http_service:GenerateGUID(false),
+            args = {code = '8Cj5abGrNv'}
+        })
+    })
+end})
 
 
 
