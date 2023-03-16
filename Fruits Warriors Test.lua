@@ -142,22 +142,7 @@ local settings = window:AddFolder('Settings') do
     settings:AddButton({text = 'Unload', callback = function() library:Close() end}) 
 end
 
-window:AddButton({text = 'Join Discord', callback = function()
-    setclipboard('discord.gg/ppDqYsPUSm')
-    req({
-        Url = 'http://127.0.0.1:6463/rpc?v=1',
-        Method = 'POST',
-        Headers = {
-            ['Content-Type'] = 'application/json',
-            Origin = 'https://discord.com'
-        },
-        Body = http_service:JSONEncode({
-            cmd = 'INVITE_BROWSER',
-            nonce = http_service:GenerateGUID(false),
-            args = {code = '8Cj5abGrNv'}
-        })
-    })
-end})
+
 
 
 
