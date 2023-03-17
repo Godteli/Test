@@ -1,5 +1,5 @@
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/JRL-lav/Scripts/main/U", true))()
-local window = library:CreateWindow('LDQ HUB')
+local window = library:CreateWindow('LĐQ HUB')
 
 local players = game:GetService('Players')
 local workspace = game:GetService('Workspace')
@@ -22,8 +22,46 @@ local function is_running()
     return library.open
 end
 
-local main = library:CreateWindow('Main')
-
+local main = window:AddFolder('Main') do 
+    local quest_table = {}
+    do 
+        for i, v in pairs(getgc(true)) do 
+            if (type(v) == 'table' and rawget(v, 'Quest') and rawget(v, 'Text')) then 
+                table.insert(quest_table, v.Quest)
+            end
+            
+            if (#quest_table == 16) then break end
+        end
+        
+        for i = 1, math.floor(#quest_table/2) do -- stole this from dev forum
+            local j = #quest_table - i + 1
+            quest_table[i], quest_table[j] = quest_table[j], quest_table[i]
+        end
+    end
+    
+    local function get_mob(overwrite)
+        local dist = math.huge 
+        local mob = nil 
+        
+        for i,v in pairs(workspace.Mobs:GetChildren()) do
+            local m_root = v:FindFirstChild('HumanoidRootPart')
+            local m_head = v:FindFirstChild('Head')
+            local char = client.Character 
+            local root = char and char:FindFirstChild('HumanoidRootPart')
+            
+            if (not overwrite or v.Name == overwrite and m_root and char and root and m_head and m_head.Transparency == 0) then 
+                local mag = (m_root.Position - root.Position).magnitude 
+                
+                if (mag < dist) then 
+                    dist = mag 
+                    mob = v 
+                end
+            end
+        end
+        
+        return mob
+    end
+    
     local function attack()
         if (client.Backpack:FindFirstChild(flags.chosen_weapon)) then 
             client.Character.Humanoid:EquipTool(client.Backpack:FindFirstChild(flags.chosen_weapon))
@@ -114,28 +152,9 @@ local main = library:CreateWindow('Main')
     end)
 end
 
-local settings = library:CreateWindow('Settings')
+local settings = window:AddFolder('Settings') do 
     settings:AddButton({text = 'Unload', callback = function() library:Close() end}) 
 end
-
-window:AddButton({text = 'Join Discord', callback = function()
-    setclipboard('discord.gg/ppDqYsPUSm')
-    req({
-        Url = 'http://127.0.0.1:6463/rpc?v=1',
-        Method = 'POST',
-        Headers = {
-            ['Content-Type'] = 'application/json',
-            Origin = 'https://discord.com'
-        },
-        Body = http_service:JSONEncode({
-            cmd = 'INVITE_BROWSER',
-            nonce = http_service:GenerateGUID(false),
-            args = {code = '8Cj5abGrNv'}
-        })
-    })
-end})
-
-
 
 
 library:Init()
