@@ -6672,6 +6672,27 @@ end)
         game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
     end)
     
+    spawn(function()
+      while wait() do
+      if _G.WhiteScreen then
+        for i, v in pairs(game.Workspace["_WorldOrigin"]:GetChildren()) do
+            if v.Name == "CurvedRing" or v.Name == "SlashHit" or v.Name == "DamageCounter" or v.Name == "SwordSlash" or v.Name == "SlashTail" or v.Name == "Sounds" then
+                v:Destroy() 
+            end
+        end
+    end
+    end
+end) 
+    
+        Misc:Toggle("White Screen",_G.WhiteScreen,function(value)
+    _G.WhiteScreen = value
+if _G.WhiteScreen == true then
+    game:GetService("RunService"):Set3dRenderingEnabled(false)
+elseif _G.WhiteScreen == false then
+    game:GetService("RunService"):Set3dRenderingEnabled(true)
+end
+end)
+    
     Misc:Button("Server Hop",function()
         Hop()
     end)
