@@ -2302,6 +2302,12 @@ Main:Button("Auto Fram Chest",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/NickelHUBB/SonicTuru/main/ChestFarmOp"))()
 end)
 
+Main:Seperator("Anti Afk")
+
+Main:Button("Anti Afk",function()
+loadstring(game:HttpGet("https://pastebin.com/raw/LS6LsEHH"))()
+end)
+
 Client = Main:Label("FPS Server")
 
 function UpdateClient()
