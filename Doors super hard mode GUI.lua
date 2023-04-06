@@ -1831,11 +1831,9 @@ setclipboard("https://discord.gg/ppDqYsPUSm")
       
       Main:Seperator("「Super Hard Mode Script」")
       Main:Label("Remove")
-      Main:Label("Banana (Some time not work), Jeff hitbox, Greed, Eyes damage, 
-Screech (screech will still appear unless removed), Light shatter, Library Shop")
+      Main:Label("Banana, Jeff hitbox, Eyes damage, Screech, Light shatter,")
       Main:Label("Misc")
-      Main:Label("Complete Evelator Minigame, Speed boost,
- Create Enitity Hints")
+      Main:Label("Complete Evelator Minigame, Speed boost, Create Enitity Hints")
       Main:Label("Mark (Light)")
       Main:Label("Next Door, Key pick up, Gate Level, Hint books, Evelator breaker")
       
