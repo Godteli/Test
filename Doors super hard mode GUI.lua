@@ -523,7 +523,7 @@ local Hub1 = Instance.new("TextLabel")
 	Hub1.Position = UDim2.new(0, 130, 0, 0)
 	Hub1.Size = UDim2.new(0, 50, 0, 27)
 	Hub1.Font = Enum.Font.Code
-	Hub1.Text = "| BLOX FRUIT"
+	Hub1.Text = "| DOORS"
 	Hub1.TextColor3 = Color3.fromRGB(51,255,255)
 	Hub1.TextSize = 15.000
 
@@ -1831,9 +1831,11 @@ setclipboard("https://discord.gg/ppDqYsPUSm")
       
       Main:Seperator("「Super Hard Mode Script」")
       Main:Label("Remove")
-      Main:Label("Banana, Jeff hitbox, Greed, Eyes damage, Screech (screech will still appear unless removed), Light shatter, Library Shop")
+      Main:Label("Banana (Some time not work), Jeff hitbox, Greed, Eyes damage, 
+Screech (screech will still appear unless removed), Light shatter, Library Shop")
       Main:Label("Misc")
-      Main:Label("Complete Evelator Minigame, Speed boost, Create Enitity Hints")
+      Main:Label("Complete Evelator Minigame, Speed boost,
+ Create Enitity Hints")
       Main:Label("Mark (Light)")
       Main:Label("Next Door, Key pick up, Gate Level, Hint books, Evelator breaker")
       
