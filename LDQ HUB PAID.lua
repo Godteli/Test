@@ -2963,6 +2963,7 @@ local Stats = Library:Tab("Stats","rbxassetid://7040410130")
     local DevilFruit = Library:Tab("Fruit","rbxassetid://7044233235")
     local Shop = Library:Tab("Shop","rbxassetid://6031265976")
     local Misc = Library:Tab("Misc","rbxassetid://6034509993")
+    local Race = Library:Tab("Race v4","rbxassetid://13077143452")
     --------------------------------------------------------------------
 Setting:Seperator("「 Credits 」")
     Setting:Label("Made By BinxGodteli#7820 ")
@@ -3785,7 +3786,7 @@ end)
     Main:Seperator("「 Farm Chest 」")
     
     Main:Button("Tp Chest (Risky!)",function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/chestfarm"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/NickelHUBB/SonicTuru/main/ChestFarmOp"))()
     end)
     
     Main:Seperator("「 Auto Seas 」")
@@ -8321,3 +8322,9 @@ end)
     Misc:Toggle("NoClip",_G.NOCLIP,function(value)
         _G.NOCLIP = value
     end)
+    
+Race:Seperator("「 Teleport 」")
+
+Race:Button("Teleport To Temple Of Time",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Godteli/Code-Race-v4/main/Teleport%20To%20Temple%20Of%20Time"))()
+end)
