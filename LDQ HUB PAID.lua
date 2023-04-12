@@ -8325,6 +8325,44 @@ end)
     
 Race:Seperator("「 Teleport 」")
 
+Race:Label("「 Only For Sea 3 」")
+
 Race:Button("Teleport To Temple Of Time",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Godteli/Code-Race-v4/main/Teleport%20To%20Temple%20Of%20Time"))()
+end)
+
+Race:Button("Teleport To Top Of Great Tree",function()
+topos(CFrame.new(2955.685546875, 2282.119873046875, -7219.50146484375))
+end)
+
+Race:Button("Teleport To Trial Fish",function()
+topos(CFrame.new(28226.248046875, 14890.658203125, -214.10935974121094))
+end)
+
+Race:Button("Teleport To Trial Cyborg",function()
+topos(CFrame.new(28492.390625, 14895.658203125, -420.61614990234375))
+end)
+
+Race:Button("Teleport To Trial Mink",function()
+topos(CFrame.new(29019.392578125, 14890.658203125, -381.052246093755))
+end)
+
+Race:Button("Teleport To Trial Human",function()
+topos(CFrame.new(29237.375, 14890.658203125, -206.68502807617188))
+end)
+
+Race:Button("Teleport To Trial Sky",function()
+topos(CFrame.new(28967.857421875, 14919.3076171875, 233.9134521484375))
+end)
+
+Race:Button("Teleport To Trial Ghoul",function()
+topos(CFrame.new(28673.28125, 14890.359375, 454.44921875))
+end)
+
+Race:Button("Teleport To Lever",function()
+topos(CFrame.new(28577.021484375, 14937.861328125, 75.82576751708984))
+end)
+
+Race:Button("Teleport To Ancient One",function()
+topos(CFrame.new(28973.646484375, 14889.658203125, -116.98210144042969))
 end)
