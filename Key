@@ -1,1 +1,2 @@
-LOLIISSUSGG
+local key = "LOLIISSUSGG"
+return key
