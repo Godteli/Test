@@ -5,6 +5,7 @@ local MODILEMAGE = Instance.new("ImageLabel")
 local posto = Instance.new("UIStroke")
 
 fuckshit.Parent = Open
+LDQHUB.Name = "LDQHUB"
 
 LDQHUB.Name = "LDQHUB"
 LDQHUB.Parent = game.CoreGui
@@ -1810,5 +1811,10 @@ end
 		end
 		return main
 	end
+	
+function LDQUIMAIN:Destroy()
+	LDQHUB:Destroy()
+end
+
 	return uitab
 end
