@@ -1,0 +1,3 @@
+getgenv().gamemode = "normal"
+getgenv().boost = false
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Godteli/Test/main/Comet%20PSX"))()
