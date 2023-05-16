@@ -1952,3 +1952,4 @@ Main:Button("Get all elements", function()
     game.ReplicatedStorage.rEvents.elementMasteryEvent:FireServer("Blazing Entity")
     game.ReplicatedStorage.rEvents.elementMasteryEvent:FireServer("Eternity Storm")
 end)
+
